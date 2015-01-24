@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+<title>Verb Tables</title>
+
+<script src="greekfunctions.js"></script>
+<script src="verblist.js"></script>
+<script src="conjugation.js"></script>
+<script type="text/javascript">
+
+function submitVerb() {
+	verb = gebid("verbInput").value
+	gebid("verbInput").value = ""
+	if (verb == "") { verb = "λύω" }
+	if (getVerb(verb) == false) {
+		alert("Verb not found.")
+		return
+	}
+
+	for (tense=0; tense<4; tense++) {
+		for (person=1; person<=3; person++) {
+			gebid("t" + tense + person + "ps").innerHTML = conjugate(getVerb(verb), person, tense)
+			gebid("t" + tense + person + "pp").innerHTML = conjugate(getVerb(verb), person + 3, tense)
+		}
+	}
+}
+
+function gebid(s) { return document.getElementById(s) }
+function onKeyDown(e) {
+	if (e.keyCode == 13) { submitVerb() }
+}
+document.onkeydown = onKeyDown
+
+</script>
+
+</head>
+
+<body>
+
+<input type="text" id="verbInput">&nbsp;<input type="button" value="Conjugate" onclick="submitVerb()"><br><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Present</td></tr>
+<tr><td id="t01ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t01pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t02ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t02pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t03ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t03pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Future</td></tr>
+<tr><td id="t11ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t11pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t12ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t12pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t13ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t13pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Imperfect</td></tr>
+<tr><td id="t21ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t21pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t22ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t22pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t23ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t23pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Aorist</td></tr>
+<tr><td id="t31ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t31pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t32ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t32pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t33ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t33pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+</body>
+
+</html>

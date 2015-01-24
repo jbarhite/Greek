@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Vocab File Generator</title>
+
+<script type="text/javascript">
+
+l1 = []
+l2 = []
+
+function addTerm() {
+	var term = gebid("input").value
+	if (term == "") { return }
+	gebid("input").value = ""
+	if (l1.length > l2.length) { l2.push(term) } else { l1.push(term) }
+	generate()
+}
+
+function generate() {
+	s = "vocabSet = [<br>"
+	for (var i=0; i<l2.length; i++) {
+		s += "&nbsp;&nbsp;&nbsp;&nbsp;[\"" + l1[i] + "\", \"" + l2[i] + "\"]"
+		if (i < l2.length - 1) { s += "," }
+		s += "<br>"
+	}
+	s += "]"
+	gebid("output").innerHTML = s
+}
+
+function hideInput() {
+	document.body.innerHTML = gebid("output").innerHTML
+}
+
+function init() {
+	gebid("input").select()
+}
+
+function gebid(s) { return document.getElementById(s) }
+
+function onKeyDown(e) {
+	if (e.keyCode == 13) { addTerm() }
+}
+document.onkeydown = onKeyDown
+
+</script>
+
+</head>
+
+<body onload="init()">
+
+<input id="input" type="text" style="width:320px"> <input type="button" value="Hide Input" onclick="hideInput()"><br><br>
+<div id="output"></div>
+
+</body>
+
+</html>
