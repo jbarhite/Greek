@@ -1,5 +1,5 @@
-var tenseList = ["present", "future", "imperfect", "aorist"]
-var tensesActive = [true, true, true, true]
+var tenseList = ["present", "future", "imperfect", "aorist", "present perfect"]
+var tensesActive = [true, true, true, true, true]
 
 // BEGIN REQUIRED FUNCTIONS
 
@@ -8,7 +8,8 @@ function optionsForm() {
 	s += "<input type=\"checkbox\" name=\"present\" id=\"present\">Present<br>"
 	s += "<input type=\"checkbox\" name=\"future\" id=\"future\">Future<br>"
 	s += "<input type=\"checkbox\" name=\"imperfect\" id=\"imperfect\">Imperfect<br>"
-	s += "<input type=\"checkbox\" name=\"aorist\" id=\"aorist\">Aorist"
+	s += "<input type=\"checkbox\" name=\"aorist\" id=\"aorist\">Aorist<br>"
+	s += "<input type=\"checkbox\" name=\"present perfect\" id=\"present perfect\">Present Perfect"
 	return s
 }
 
