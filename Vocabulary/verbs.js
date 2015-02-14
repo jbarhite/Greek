@@ -76,5 +76,5 @@ vocabSet = [
     ["παύομαι", "cease from"],
     ["πείθομαι", "obey"],
     ["πορεύω", "carry, convey"],
-    ["πορεύμαι", "march, journey"]
+    ["πορεύoμαι", "march, journey"]
 ]
