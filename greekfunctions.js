@@ -43,6 +43,13 @@ function placeRecessiveAccent(word) {
 	return word.substring(0, pos) + setAccent(word[pos], 1, -1) + word.substring(pos + 1, word.length)
 }
 
+function augment(word) {
+	if (!isVowel(word.substring(0, 1))) {
+		word = "ἐ" + word
+	}
+	return word
+}
+
 function isVowel(char) { return vowels.indexOf(char) >= 0 }
 function isDiphthong(pair) { return ["αι", "ει", "ηι", "οι", "ωι", "υι", "αυ", "ευ", "ηυ", "ου"].indexOf(setAccents(pair, 0, 0)) >= 0 }
 function vowelLength(char) { return (["η", "ω"].indexOf(setAccent(char, 0, 0)) >= 0) ? "L" : "S" }
