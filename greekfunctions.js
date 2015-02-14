@@ -16,6 +16,10 @@ function setAccent(char, accentCode, breathmarkCode) {
 	return vowels[i - i % 12 + accentCode + 4 * breathmarkCode]
 }
 
+function getBreathMarkCode(char) {
+	return Math.floor(vowels.indexOf(char) / 4) % 3
+}
+
 function analyzeSyllables(word) {
 	syllables = []
 	word = setAccents(word, 0, 0)
@@ -44,8 +48,22 @@ function placeRecessiveAccent(word) {
 }
 
 function augment(word) {
-	if (!isVowel(word.substring(0, 1))) {
+	firstLetter = word.substring(0, 1)
+	if (!isVowel(firstLetter)) {
 		word = "ἐ" + word
+	} else {
+		switch(setAccent(firstLetter, 0, 0)) {
+			case "α":
+			case "ε":
+				newFirstLetter = "η"
+				break
+			case "ο":
+				newFirstLetter = "ω"
+				break
+			default:
+				newFirstLetter = firstLetter
+		}
+		word = setAccent(newFirstLetter, 0, getBreathMarkCode(firstLetter)) + word.substring(1, word.length)
 	}
 	return word
 }
