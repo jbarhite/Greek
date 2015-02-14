@@ -68,8 +68,8 @@ function optionsForm() {
 	s += "<table border=1 cellpadding=3><tr><td id=\"nSets\">0 sets</td><td id=\"nTerms\">0 terms</td></tr></table><br><br>"
 	s += "<input type=\"checkbox\" name=\"flip\" id=\"flip\">Flip question/answer<br>"
 	s += "<input type=\"checkbox\" name=\"shuffle\" id=\"shuffle\">Shuffle terms (only applicable if Every Term Once selected)<br><br>"
-	s += "<input type=\"radio\" name=\"random\" checked=\"checked\" id=\"random\">Random Selection<br>"
-	s += "<input type=\"radio\" name=\"random\">Every Term Once"
+	s += "<input type=\"radio\" name=\"random\" checked=\"checked\">Every Term Once<br>"
+	s += "<input type=\"radio\" name=\"random\" id=\"random\">Random Selection"
 	return s
 }
 
