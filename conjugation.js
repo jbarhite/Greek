@@ -1,11 +1,12 @@
 // tenses: (0) present, (1) future, (2) imperfect, (3) aorist, (4) present passive, (5) imperfect passive
 
 endings = [
-	["ω", "εις", "ει", "ομεν", "ετε", "ουσι(ν)"], // present
-	["ω", "εις", "ει", "ομεν", "ετε", "ουσι(ν)"], // future
-	["ον", "ες", "ε(ν)", "ομεν", "ετε", "ον"], // imperfect, 2nd aorist
-	["α", "ας", "ε(ν)", "αμεν", "ατε", "αν"], // 1st aorist
-	["ομαι", "ῃ", "εται", "ομεθα", "εσθε", "ονται"] // present passive
+	["ω", "εις", "ει", "ομεν", "ετε", "ουσι(ν)"], // present (0)
+	["ω", "εις", "ει", "ομεν", "ετε", "ουσι(ν)"], // future (1)
+	["ον", "ες", "ε(ν)", "ομεν", "ετε", "ον"], // imperfect, 2nd aorist (2)
+	["α", "ας", "ε(ν)", "αμεν", "ατε", "αν"], // 1st aorist (3)
+	["ομαι", "ῃ", "εται", "ομεθα", "εσθε", "ονται"], // present passive (4)
+	["ομην", "ου", "ετο", "ομεθα", "εσθε", "οντο"] // imperfect passive (5)
 ]
 
 function conjugate(verb, person, tense) {
@@ -34,6 +35,10 @@ function conjugate(verb, person, tense) {
 		case 4:
 			stem = verb[0].substring(0, verb[0].length - 1)
 			ending = endings[4][person - 1]
+			break
+		case 5:
+			stem = augment(verb[0].substring(0, verb[0].length - 1))
+			ending = endings[5][person - 1]
 			break
 	}
 	return placeRecessiveAccent(setAccents(stem, 0, -1) + ending)
