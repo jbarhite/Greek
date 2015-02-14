@@ -66,4 +66,15 @@ vocabSet = [
     ["οὔ φημι", "say...not, deny"],
     ["ἀπελαύνω", "drive away, march away", "Chapter 15"],
     ["ἐλαύνω", "drive, march"],
+    ["σπεύδω", "hasten, hurry", "Chapter 16"],
+    ["δέχομαι", "receive", "Chapter 17"],
+    ["λύομαι", "ransom"],
+    ["μάχομαι", "fight"],
+    ["μιμνήσκω", "remind"],
+    ["μιμνήσκομαι", "remember, mention"],
+    ["ὀνομάζω", "name, call (by name)"],
+    ["παύομαι", "cease from"],
+    ["πείθομαι", "obey"],
+    ["πορεύω", "carry, convey"],
+    ["πορεύμαι", "march, journey"]
 ]

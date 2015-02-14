@@ -73,5 +73,15 @@ vocabSet = [
     ["παῖς", "child, boy, girl"],
     ["πατρίς", "fatherland, own country"],
     ["φυγάς", "exile (a person)"],
-    ["χάρις", "grace, thanks"]
+    ["χάρις", "grace, thanks"],
+    ["Ἄλκηστις", "Alcestis", "Chapter 16"],
+    ["ἔρως", "love, desire"],
+    ["ἔτος", "year"],
+    ["Ἡρακλῆς", "Heracles"],
+    ["φόβος", "fear"],
+    ["αἰχμάλωτος", "prisoner (of war)", "Chapter 17"],
+    ["κεφαλή", "head"],
+    ["μήν", "month"],
+    ["νόμος", "law"],
+    ["χρόνος", "time"]
 ]

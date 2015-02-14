@@ -13,5 +13,13 @@ vocabSet = [
     ["μικρός", "small", "Chapter 8"],
     ["ῥᾴδιος", "easy"],
     ["ἄξιος", "worthy", "Chapter 9"],
-    ["αὐτός", "same"]
+    ["αὐτός", "same"],
+    ["ἄλλος", "other, another", "Chapter 16"],
+    ["ἀρχαῖος", "ancient"],
+    ["ἕκαστος", "each, every"],
+    ["μέγας", "big, great, large"],
+    ["πολύς", "much, many"],
+    ["τάλας", "wretched"],
+    ["δέκατος", "tenth", "Chapter 17"],
+    ["πέμπτος", "fifth"]
 ]
