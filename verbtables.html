@@ -16,7 +16,7 @@ function submitVerb() {
 		return
 	}
 
-	for (tense=0; tense<6; tense++) {
+	for (tense=0; tense<8; tense++) {
 		for (person=1; person<=3; person++) {
 			gebid("t" + tense + person + "ps").innerHTML = conjugate(getVerb(verb), person, tense)
 			gebid("t" + tense + person + "pp").innerHTML = conjugate(getVerb(verb), person + 3, tense)
@@ -78,6 +78,20 @@ document.onkeydown = onKeyDown
 <tr><td id="t51ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t51pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
 <tr><td id="t52ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t52pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
 <tr><td id="t53ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t53pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Aorist Passive</td></tr>
+<tr><td id="t61ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t61pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t62ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t62pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t63ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t63pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+</table><br>
+
+<table style="border-collapse:collapse">
+<tr><td colspan=2 style="text-align:center; border:1px solid black; width:300px; padding:5px">Future Passive</td></tr>
+<tr><td id="t71ps" style="border:1px solid black; padding:5px; width:50%">&nbsp;</td><td id="t71pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t72ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t72pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
+<tr><td id="t73ps"  style="border:1px solid black; padding:5px">&nbsp;</td><td id="t73pp"  style="border:1px solid black; padding:5px">&nbsp;</td></tr>
 </table><br>
 
 </body>

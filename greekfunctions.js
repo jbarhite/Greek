@@ -20,6 +20,7 @@ function getBreathMarkCode(char) {
 	return Math.floor(vowels.indexOf(char) / 4) % 3
 }
 
+// needs to be modified to correctly handle iota subscripts
 function analyzeSyllables(word) {
 	syllables = []
 	word = setAccents(word, 0, 0)
@@ -64,6 +65,14 @@ function augment(word) {
 				newFirstLetter = firstLetter
 		}
 		word = setAccent(newFirstLetter, 0, getBreathMarkCode(firstLetter)) + word.substring(1, word.length)
+	}
+	return word
+}
+
+function removeAugment(word, fpp) {
+	firstLetter = fpp.substring(0, 1)
+	if (!isVowel(firstLetter)) {
+		word = word.substring(1, word.length)
 	}
 	return word
 }
